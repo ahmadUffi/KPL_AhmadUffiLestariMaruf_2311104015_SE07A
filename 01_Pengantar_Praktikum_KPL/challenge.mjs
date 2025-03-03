@@ -24,11 +24,16 @@ const tanya = () => {
       tanya();
     });
   } else {
+    // jawaban.map((jaw) => {
+    //   console.log(jaw);
+    // });
+
     console.log("\n jawaban :");
     console.log(`Name: ${jawaban[0]}`);
     console.log(`Major: ${jawaban[1]}`);
     console.log(`University: ${jawaban[2]}`);
     console.log(`Age: ${jawaban[3]}`);
+
     input.close();
   }
 };
