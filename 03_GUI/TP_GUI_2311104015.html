@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        background-color: #aeaeae;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        width: max-content;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #inputan {
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+      }
+
+      #btn {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+      }
+
+      .clear {
+        padding: 10px 20px;
+        background-color: #f44336;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>List nama yang sudah bayar kas</h1>
+      <div class="inputan">
+        <input type="text" id="inputan" placeholder="masukan nama" />
+        <button id="btn">Submit</button>
+      </div>
+
+      <div class="list">
+        <ol id="list"></ol>
+      </div>
+
+      <div class="clear">Hapus Semua</div>
+    </div>
+
+    <script>
+      let inputan = document.getElementById("inputan");
+      let btn = document.getElementById("btn");
+      let ul = document.getElementById("list");
+      let clear = document.querySelector(".clear");
+
+      btn.addEventListener("click", () => {
+        if (!inputan.value) {
+          alert("masukan inputan");
+          return;
+        }
+
+        let li = document.createElement("li");
+        li.textContent = inputan.value;
+        ul.appendChild(li);
+        inputan.value = "";
+      });
+
+      clear.addEventListener("click", () => {
+        ul.innerHTML = "";
+        inputan.value = "";
+      });
+    </script>
+  </body>
+</html>
