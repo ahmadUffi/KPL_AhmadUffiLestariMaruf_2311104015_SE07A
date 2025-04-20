@@ -1,0 +1,25 @@
+{
+  "members": [
+    {
+      "firstName": "rifki taifiq",
+      "lastName": "rohman",
+      "gender": "male",
+      "age": 20,
+      "nim": "2311104001"
+    },
+    {
+      "firstName": "Fajar",
+      "lastName": "Budianto",
+      "gender": "male",
+      "age": 20,
+      "nim": "2311104002"
+    },
+    {
+      "firstName": "salman",
+      "lastName": "alfarisi",
+      "gender": "male",
+      "age": 20,
+      "nim": "2311104003"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "firstName": "Ahmad Uffi",
+  "lastName": "Lestari makruf",
+  "gender": "male",
+  "age": 21,
+  "address": {
+    "streetAddress": "karangklesem",
+    "city": "Purwokerto",
+    "state": "Central Java"
+  },
+  "courses": [
+    { "code": "CRI2C4", "name": "Konstruksi Perangkat Lunak" },
+    { "code": "CRI2XX", "name": "Nama Mata Kuliah" }
+  ]
+}

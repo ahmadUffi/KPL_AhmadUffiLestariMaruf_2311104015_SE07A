@@ -1,0 +1,32 @@
+{
+  "courses": [
+    {
+      "code": "CRI2C4",
+      "name": "Konstruksi Perangkat Lunak"
+    },
+    {
+      "code": "A1B2C3",
+      "name": "Basis Data"
+    },
+    {
+      "code": "A1B2C4",
+      "name": "Sistem Operasi"
+    },
+    {
+      "code": "A1B2C5",
+      "name": "Jaringan Komputer"
+    },
+    {
+      "code": "A1B2C6",
+      "name": "Pemrograman Web"
+    },
+    {
+      "code": "A1B2C7",
+      "name": "Pemrograman Berorientasi Objek"
+    },
+    {
+      "code": "A1B2C8",
+      "name": "Analisis dan Perancangan Sistem"
+    }
+  ]
+}
