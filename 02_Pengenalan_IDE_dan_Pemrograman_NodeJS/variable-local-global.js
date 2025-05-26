@@ -1,4 +1,4 @@
-let globalVariable = "Rifki Taufik";
+let globalVariable = "Ahmad Uffi";
 
 function getMyIdentity() {
   let localVariable = 2311104015;
