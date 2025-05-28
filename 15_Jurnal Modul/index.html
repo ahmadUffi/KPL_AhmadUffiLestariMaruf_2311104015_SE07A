@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Modul 15 - Login & Register Aman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="tabs">
+      <div class="tab active" onclick="showTab('register')">Register</div>
+      <div class="tab" onclick="showTab('login')">Login</div>
+    </div>
+
+    <!-- Form Register -->
+    <div class="form active" id="register">
+      <h2>Register</h2>
+      <input type="text" id="regUsername" placeholder="Username">
+      <input type="password" id="regPassword" placeholder="Password">
+      <button onclick="register()">Daftar</button>
+    </div>
+
+    <!-- Form Login -->
+    <div class="form" id="login">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Username">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button onclick="login()">Masuk</button>
+    </div>
+
+    <div id="pesan"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
