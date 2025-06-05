@@ -1,0 +1,93 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API Movies",
+      "version": "1.0.0",
+      "description": "API sederhana untuk data Movies"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:5000"
+      }
+    ],
+    "paths": {
+      "/api/Movies": {
+        "get": {
+          "summary": "Get semua Movies",
+          "responses": {
+            "200": {
+              "description": "List semua Movies"
+            }
+          }
+        },
+        "post": {
+          "summary": "Tambah Movie baru",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "title": { "type": "string" },
+                    "director": { "type": "string" },
+                    "stars": {
+                      "type": "array",
+                      "items": { "type": "string" }
+                    },
+                    "description": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Movie berhasil ditambahkan"
+            }
+          }
+        }
+      },
+      "/api/Movies/{id}": {
+        "get": {
+          "summary": "Get Movie berdasarkan id",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": { "type": "integer" }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Data Movie"
+            },
+            "404": {
+              "description": "Movie tidak ditemukan"
+            }
+          }
+        },
+        "delete": {
+          "summary": "Hapus Movie berdasarkan id",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": { "type": "integer" }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Movie berhasil dihapus"
+            },
+            "404": {
+              "description": "Movie tidak ditemukan"
+            }
+          }
+        }
+      }
+    }
+  }
+  

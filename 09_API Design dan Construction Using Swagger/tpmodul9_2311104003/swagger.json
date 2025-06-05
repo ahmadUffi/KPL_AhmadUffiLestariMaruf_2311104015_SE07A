@@ -1,0 +1,88 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API Mahasiswa",
+      "version": "1.0.0",
+      "description": "API sederhana untuk data mahasiswa"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:5000"
+      }
+    ],
+    "paths": {
+      "/api/mahasiswa": {
+        "get": {
+          "summary": "Get semua mahasiswa",
+          "responses": {
+            "200": {
+              "description": "List mahasiswa"
+            }
+          }
+        },
+        "post": {
+          "summary": "Tambah mahasiswa baru",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "nama": { "type": "string" },
+                    "nim": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Mahasiswa berhasil ditambahkan"
+            }
+          }
+        },
+        "/api/mahasiswa/{index}": {
+          "get": {
+            "summary": "Get mahasiswa berdasarkan index",
+            "parameters": [
+              {
+                "name": "index",
+                "in": "path",
+                "required": true,
+                "schema": { "type": "integer" }
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Data mahasiswa"
+              },
+              "404": {
+                "description": "Mahasiswa tidak ditemukan"
+              }
+            }
+          },
+          "delete": {
+            "summary": "Hapus mahasiswa berdasarkan index",
+            "parameters": [
+              {
+                "name": "index",
+                "in": "path",
+                "required": true,
+                "schema": { "type": "integer" }
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Mahasiswa berhasil dihapus"
+              },
+              "404": {
+                "description": "Mahasiswa tidak ditemukan"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
